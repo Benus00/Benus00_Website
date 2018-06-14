@@ -16,8 +16,8 @@ body {
     position: absolute;
 }
 
-body{
-    background-image: url("eiffel-tower.jpg");
+main{
+    background-image: url("eiffel-tower-night.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -25,6 +25,13 @@ body{
     background-size: cover;
     background-position: center center;
     padding: 1em;
+}
+
+footer{
+    margin: 0;
+    border: none;
+    padding: 0;
+    height: 150px;
 }
 
 h1{
@@ -45,17 +52,33 @@ a{
     color: initial;
 }
 
-.grid{
-    width: 100%;
-    border: none;
-    padding: 20px;
-}
-
 .field{
-    display: inline;
-    border: 1px inset orangered;
-    max-width: 30%;
-    min-width: 20%;
+    display: inline-block;
+    border: 1px inset rgba(255, 68, 0, 0.5);
+    width: 20%;
+    height: 150px;
     margin: 20px;
     padding: 5px;
+    background-color: rgba(255, 235, 205, 0.7);
+}
+
+.flex-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: inherit;
+}
+
+.backgroundOption{
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    border: none;
+    min-width: 200px;
+    min-height: 100px;
+    max-height: 150px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
