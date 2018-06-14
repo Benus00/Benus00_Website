@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+.gameboard{
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    border: none;
+    padding: 0px;
+    font-size: 0px;
+    background-image: url("gameboard.png");
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.field{
+    height: 33%;
+    width: 33%;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.xmid{
+    min-width: 33%;
+    width: auto;
+}
+
+.ymid{
+    min-height: 33%;
+    height: auto;
+}
+
+.cross{
+    background-image: url("cross.png");
+}
+
+.circle{
+    background-image: url("circle.png");
+}
