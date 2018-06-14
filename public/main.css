@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 html,
 body {
     padding: 0;
@@ -10,26 +14,30 @@ body {
     height: 100vh;
     width: 100vw;
     position: absolute;
-    padding: 10px;
 }
 
 body{
-    background-image: url("paris-sunset.jpeg");
+    background-image: url("eiffel-tower.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-position: center center;
+    padding: 1em;
 }
 
 h1{
     color: orangered;
     text-align: center;
+    padding: 0;
+    margin: 0;
+
 }
 
 p{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
 }
 
 a{
