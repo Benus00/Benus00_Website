@@ -1,13 +1,19 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TicTacToe</title>
+
     <link href="styles.css" rel="stylesheet"/>
+        
+    <script src="main.js"></script>
 </head>
 
 <body>
     <main>
-        <h id="heading">TicTacToe</h>
+        <h1 id="heading">TicTacToe</h1>
         <div id="gameboard" class="gameboard">
             <img id="field11" class="field" onclick="fieldtap(1, 1)"></img>
             <img id="field21" class="field xmid" onclick="fieldtap(2, 1)"></img>
@@ -19,12 +25,16 @@
             <img id="field23" class="field xmid" onclick="fieldtap(2, 3)"></img>
             <img id="field33" class="field" onclick="fieldtap(3, 3)"></img>
         </div>
+        <div id="replay" class="replay" onclick="replay()">
+            <p id="replayText">REPLAY</p>
+        </div>
+        <div id="win" class="win">
+            <p id="winText"></p>
+        </div>
     </main>
-    <footer>
-        <p id="text">Vielen Dank, dass sie mit uns gespielt haben.</p>
-        
-        <script src="main.js"></script>
-    </footer>
+    <!-- <footer>
+        <p id="text">Thank you for playing with us.</p>
+    </footer> -->
 </body>
 
 </html>

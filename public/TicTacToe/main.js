@@ -11,30 +11,25 @@ var turn = {
     }
 }
 
-function win(winner){
-    winner = winner[0].toUpperCase() + winner.substring(1);
-    document.getElementById("text").textContent = "Herzlichen Glückwunsch! " + winner + " hat gewonnen!";
-}
-
 var gameboard = {
     field: [],
-    setSign: function(x, y){
-        gameboard.field[x-1][y-1] = turn.sign;
-        console.log(gameboard.field);
-        document.getElementById("field"+x+y).classList.add(turn.sign);
-        var winner = checkWin();
-        if(winner){
-            win(winner);
+    setSign: function(x, y, sign){
+        gameboard.field[x-1][y-1] = sign;
+        if(sign == ""){
+            document.getElementById("field"+x+y).classList.remove("circle");
+            document.getElementById("field"+x+y).classList.remove("cross");
         }
         else{
-            turn.toggle(); 
+            document.getElementById("field"+x+y).classList.add(sign);
         }
+        checkWin();
+        turn.toggle();
     }
 }
 
 function fieldtap(x, y){
     if(gameboard.field[x-1][y-1] == ""){
-        gameboard.setSign(x, y);
+        gameboard.setSign(x, y, turn.sign);
     }
 }
 
@@ -42,22 +37,45 @@ function checkWin(){
     var mainsign;
     for(var i = 0; i<3; i++){
         mainsign = gameboard.field[0][i];
-        if((mainsign == gameboard.field[1][i]) && (mainsign == gameboard.field[2][i])){
-            return mainsign;
+        if(mainsign!=""){
+            if((mainsign == gameboard.field[1][i]) && (mainsign == gameboard.field[2][i])){
+                winning(mainsign);
+            }
         }
         mainsign = gameboard.field[i][0];
-        if((mainsign == gameboard.field[i][1]) && (mainsign == gameboard.field[i][2])){
-            return mainsign;
+        if(mainsign!=""){
+            if((mainsign == gameboard.field[i][1]) && (mainsign == gameboard.field[i][2])){
+                winning(mainsign);
+            }
         }
     }
     mainsign = gameboard.field[0][0];
-    if((mainsign == gameboard.field[1][1]) && (mainsign == gameboard.field[2][2])){
-        return mainsign;
+    if(mainsign != ""){
+        if((mainsign == gameboard.field[1][1]) && (mainsign == gameboard.field[2][2])){
+            winning(mainsign);
+        }
     }
     mainsign = gameboard.field[2][0];
-    if((mainsign == gameboard.field[1][1]) && (mainsign == gameboard.field[0][2])){
-        return mainsign;
+    if(mainsign != ""){
+        if((mainsign == gameboard.field[1][1]) && (mainsign == gameboard.field[0][2])){
+            winning(mainsign);
+        }
     }
+}
+
+function winning(sign){
+    var winningText = document.getElementById("win");
+    winningText.style.display = "inline";
+    document.getElementById("winText").textContent = "Congratulations, " + sign[0].toUpperCase() + sign.substring(1) + "! You won!";
+}
+
+function replay(){
+    for(var i = 1; i<4; i++){
+        for(var j=1; j<4; j++){
+            gameboard.setSign(i, j, "");
+        }
+    }
+    document.getElementById("win").style.display = "none";
 }
 
 for(var i = 0; i<3; i++){
