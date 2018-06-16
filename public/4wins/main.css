@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+.arrow{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    object-fit: contain
+}
+
+.cell{
+    width: 90px;
+    height: 90px;
+    background-image: url("emptycircle.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.blue{
+    background-image: url("bluecircle.png");
+}
+
+.red{
+    background-image: url("redcircle.png");
+}
