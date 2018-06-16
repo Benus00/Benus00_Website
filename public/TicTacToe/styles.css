@@ -142,4 +142,8 @@ p{
     #replayText{
         font-size: x-small;
     }
+
+    #winText{
+        font-size:medium;
+    }
 }
