@@ -19,7 +19,6 @@ body {
 main{
     min-height: 900px;
     background-color: rgba(0, 255, 221, 0.274);
-    background-image: url("Wallpapers/eiffel-tower-night.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
