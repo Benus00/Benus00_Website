@@ -68,7 +68,7 @@
     {
         "id": "12",
         "name": "book-magic",
-        "fileformat": ".png",
+        "fileformat": ".jpg",
         "description": "magical book with turquoise background"
     },
     {
@@ -265,30 +265,24 @@
     },
     {
         "id": "45",
-        "name": "orange-sky-sun",
-        "fileformat": ".jpg",
-        "description": "orange sky with sun in center"
-    },
-    {
-        "id": "46",
         "name": "avenue-trees-light",
         "fileformat": ".jpg",
         "description": "avenue with trees leading to light"
     },
     {
-        "id": "47",
+        "id": "46",
         "name": "house-tree-forest",
         "fileformat": ".jpg",
         "description": "house in tree in forest"
     },
     {
-        "id": "48",
+        "id": "47",
         "name": "tree-meadow-moon",
         "fileformat": ".jpg",
         "description": "tree and meadow with moon"
     },
     {
-        "id": "49",
+        "id": "48",
         "name": "man-cave-window-stars",
         "fileformat": ".jpg",
         "description": "man in cave with window during night"
