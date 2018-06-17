@@ -31,7 +31,7 @@ function loadImages(jsonData){
         var htmlElement =  templateImage.replace('#id#', element.id).replace('#name#', element.name).replace('#format#', element.fileformat)
         imageList.innerHTML += htmlElement;
     });
-    changeBackgroundFromElement(document.getElementById("backgroundImage1"));
+    changeBackground("deer", ".jpg");
 }
 
 function changeBackgroundFromElement(element){
