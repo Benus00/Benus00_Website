@@ -57,7 +57,6 @@ p{
     margin: 0px;
     border: 1px solid red;
     padding: 0px;
-    background-color: rgba(128, 128, 128, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -133,7 +132,9 @@ p{
         width: 70vw;
         height: 70vw;
     }
+}
 
+@media (max-height: 550px){
     .replay{
         width: 100px;
         height: 20px;
@@ -142,8 +143,10 @@ p{
     #replayText{
         font-size: x-small;
     }
+}
 
+@media (max-width: 500px){
     #winText{
-        font-size:medium;
+        font-size: medium;
     }
 }
