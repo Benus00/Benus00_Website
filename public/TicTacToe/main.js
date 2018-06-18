@@ -56,6 +56,15 @@ var bot = {
         if(field !== false){
             return field;
         }
+        var antisign;
+        if(sign == "cross"){
+            antisign="circle";
+        }
+        else {antisign = "cross";}
+        field = this.checkIfWinPossible(antisign);
+        if(field !== false){
+            return field;
+        }
         return this.getFieldEasy();
     },
     checkIfWinPossible: function(sign){
