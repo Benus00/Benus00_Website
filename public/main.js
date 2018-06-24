@@ -17,10 +17,36 @@ function loadJSON(path, callback) {
 
 function loadLinks(){
     var list = document.getElementById("linkList");
-    list.innerHTML += '<a class="field" href="TicTacToe"> <p class="linkText">TicTacToe</p> </a>';
-    list.children[0].style.backgroundImage = 'url("TicTacToe/tictactoe.png")';
-    list.innerHTML += '<a class="field" href="HappyBirthday"> <p class="linkText">Happy Birthday</p> </a>';
-    list.innerHTML += '<a class="field" href="4wins"> <p class="linkText">4wins (incomplete)</p> </a>';
+    var linkInfoList = [
+        {
+            "name": "TicTacToe",
+            "backgroundUrl": "TicTacToe/tictactoe.png"
+        },
+        {
+            "name": "HappyBirthday",
+            "backgroundUrl": ""
+        },
+        {
+            "name": "4wins",
+            "backgroundUrl": ""
+        },
+        {
+            "name": "Gallery",
+            "backgroundUrl": ""
+        },
+        {
+            "name": "Leonie",
+            "backgroundUrl": ""
+        }
+    ];
+    var linkTemplate = '<a class="field" href="#name#"><div id="#name#Gradient" class="linkGradient"><p class="linkText">#name#</p></div></a>'
+    for(var i=0; i<linkInfoList.length; i++){
+        list.innerHTML += linkTemplate.replace(/#name#/g, linkInfoList[i].name);
+        list.children[i].style.backgroundImage = 'url("' + linkInfoList[i].backgroundUrl + '")';
+    }
+    // list.innerHTML += '<a class="field" href="HappyBirthday"> <p class="linkText">Happy Birthday</p> </a>';
+    // list.innerHTML += '<a class="field" href="4wins"> <p class="linkText">4wins (incomplete)</p> </a>';
+    // list.innerHTML += '<a class="field" href="Gallery"> <p class="linkText">Gallery</p> </a>';
 }
 
 function loadImages(jsonData){
@@ -31,7 +57,7 @@ function loadImages(jsonData){
         var htmlElement =  templateImage.replace('#id#', element.id).replace('#name#', element.name).replace('#format#', element.fileformat)
         imageList.innerHTML += htmlElement;
     });
-    changeBackground("deer", ".jpg");
+    changeBackground("fantasy-woman-castle", ".jpg");
 }
 
 function changeBackgroundFromElement(element){
@@ -48,7 +74,7 @@ function changeBackground(name, fileformat){
 
 function toggleDiashow(element){
     if(element.checked == true){
-        diashowTimer = window.setInterval(nextBackground, 3000);
+        diashowTimer = window.setInterval(nextBackground, 10000);
     }
     else{
         window.clearInterval(diashowTimer);
