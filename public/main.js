@@ -20,29 +20,34 @@ function loadLinks(){
     var linkInfoList = [
         {
             "name": "TicTacToe",
-            "backgroundUrl": "TicTacToe/tictactoe.png"
+            "backgroundUrl": "TicTacToe/tictactoe.png",
+            "visibility": "visible"
         },
         {
             "name": "HappyBirthday",
-            "backgroundUrl": ""
+            "backgroundUrl": "",
+            "visibility": "visible"
         },
         {
             "name": "4wins",
-            "backgroundUrl": ""
+            "backgroundUrl": "",
+            "visibility": "visible"
         },
         {
             "name": "Gallery",
-            "backgroundUrl": ""
+            "backgroundUrl": "",
+            "visibility": "visible"
         },
         {
             "name": "Leonie",
-            "backgroundUrl": ""
+            "backgroundUrl": "",
+            "visibility": "hidden"
         }
     ];
-    var linkTemplate = '<a class="field" href="#name#"><div id="#name#Gradient" class="linkGradient"><p class="linkText">#name#</p></div></a>'
+    var linkTemplate = '<a class="field" href="#name#" style="visibility: #visibility#; background-image: url(#backgroundUrl#)"><div id="#name#Gradient" class="linkGradient"><p class="linkText">#name#</p></div></a>'
     for(var i=0; i<linkInfoList.length; i++){
-        list.innerHTML += linkTemplate.replace(/#name#/g, linkInfoList[i].name);
-        list.children[i].style.backgroundImage = 'url("' + linkInfoList[i].backgroundUrl + '")';
+        list.innerHTML += linkTemplate.replace(/#name#/g, linkInfoList[i].name).replace(/#visibility#/g, linkInfoList[i].visibility).replace(/#backgroundUrl#/g, linkInfoList[i].backgroundUrl);
+        // list.children[i].style.backgroundImage = 'url("' + linkInfoList[i].backgroundUrl + '")';
     }
     // list.innerHTML += '<a class="field" href="HappyBirthday"> <p class="linkText">Happy Birthday</p> </a>';
     // list.innerHTML += '<a class="field" href="4wins"> <p class="linkText">4wins (incomplete)</p> </a>';
