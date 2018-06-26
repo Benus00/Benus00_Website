@@ -19,7 +19,9 @@ body {
 
 main{
     min-height: 900px;
-    background-color: rgba(0, 255, 221, 0.274);
+    height: 100vh;
+    background-color: rgba(0, 255, 221, 0.25);
+    background-image: url("Wallpapers/fantasy-woman-castle.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -59,7 +61,10 @@ a{
     border: 1px inset black;
     min-width: 150px;
     width: 20%;
+    max-width: 250;
     min-height: 150px;
+    height: 10%;
+    max-height: 250px;
     margin: 20px;
     padding: 0;
     background-color: rgba(255, 235, 205, 0.7);
@@ -107,21 +112,7 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: inherit;
-}
-
-.backgroundOption{
-    flex: 1;
-    margin: 0;
-    padding: 0;
-    border: none;
-    min-width: 200px;
-    max-width: 500px;
-    min-height: 100px;
-    max-height: 150px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    height: 80%;
 }
 
 @media (max-width: 1000px){
