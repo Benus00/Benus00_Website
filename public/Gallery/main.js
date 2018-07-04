@@ -40,15 +40,6 @@ function changeBackground(name, fileformat){
     document.body.children[0].style.backgroundImage = source;
 }
 
-function toggleDiashow(element){
-    if(element.checked == true){
-        diashowTimer = window.setInterval(function(){nextBackground(-1)}, 3000);
-    }
-    else{
-        window.clearInterval(diashowTimer);
-    }
-}
-
 function nextBackground(count = 1){
     var oldName = document.body.children[0].style.backgroundImage;
     oldName = imageNameByUrl(oldName);
@@ -100,7 +91,32 @@ function imageDataById(id){
     }
 }
 
+function slideDown(){
+    console.log("down");
+    $(".diashowSliderContainer").slideDown("fast", function(){$(this).css('display', 'flex');});
+}
+
+function slideUp(){
+    console.log("up");
+    $(".diashowSliderContainer").slideUp("fast");
+}
+
+function setTimerForBackground(time){
+    diashowTimer = window.setTimeout(function(){
+        nextBackground();
+        setTimerForBackground(time);
+    }, time);
+}
+
 window.onload = function(){
     // console.log(window.location.href.slice(0, -8) + 'Wallpapers/wallpapers.json');
     loadJSON(window.location.href.slice(0, -8) + 'Wallpapers/wallpapers.json', loadImages);
+
+    document.getElementById("diashowSlider").oninput = function(){
+        window.clearTimeout(diashowTimer);
+        if(this.value != 0){
+            console.log(600000/this.value/1000)
+            setTimerForBackground(600000/this.value);
+        }
+    }
 }

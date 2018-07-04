@@ -9,16 +9,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="./main.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
     <main>
-        <h1>Gallery</h1>
+        <div onmouseenter="slideDown()" onmouseleave="slideUp()">
+                <div id="diashowSliderContainer" class="diashowSliderContainer">
+                        <input type="range" min="0" max="600" value="0" id="diashowSlider" class="diashowSlider">
+                </div>
+                <h1 onclick="slideDown()">Gallery</h1>
+        </div>
 
-        <input type="checkbox" id="diashowCheckbox" onclick="toggleDiashow(this)">Diashow</input>
         <div id="arrowcontainer">
-            <div id="previousBackgroundButton" class="previousBackgroundArrow" onclick="nextBackground(-1)"></div>
-            <div id="nextBackgroundArrow" class="nextBackgroundArrow" onclick="nextBackground(1)"></div>
+            <div id="previousBackgroundArrow" class="backgroundArrow backArrow" onclick="nextBackground(-1)"></div>
+            <div id="nextBackgroundArrow" class="backgroundArrow forwardArrow" onclick="nextBackground(1)"></div>
         </div>
     </main>
     <footer>

@@ -17,9 +17,13 @@ body {
     position: absolute;
 }
 
+body{
+    padding-right: 17px;
+}
+
 main{
-    min-height: 900px;
-    background-color: rgba(0, 255, 221, 0.25);
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -27,7 +31,7 @@ main{
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    padding: 1em;
+    padding: 0;
 }
 
 footer{
@@ -39,14 +43,15 @@ footer{
 }
 
 h1{
+    /* position: relative; */
     font-size: 3em;
     color: orangered;
     text-align: center;
     letter-spacing: 2px;
     text-shadow: 3px 2px black;
-    padding: 0;
     margin: 0;
-
+    padding: 15px;
+    /* z-index: 2; */
 }
 
 .flex-grid{
@@ -68,37 +73,57 @@ h1{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    z-index: 1;
 }
 
 #arrowcontainer{
+    z-index: -10;/*hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiieeeeeeeeeeeeeeeer Hilfe Tom! der arrow Container soll nicht vor allen Elementen sein, sodass ich sie dann nemme anclicken kann.*/
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 
-.nextBackgroundArrow{
+.backgroundArrow{
     display: inline-flex;
-    margin: auto 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(128, 128, 128, 0.25);
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     height: 50%;
     width: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-.previousBackgroundArrow{
-    display: inline-flex;
-    margin: auto 0;
+.backgroundArrow:hover{
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(128, 128, 128, 0.25);
-    height: 50%;
-    width: 50px;
-    align-self: flex-start;
+}
+
+.backArrow{
+    background-image: url("");
+}
+
+.forwardArrow{
+    background-image: url("");
+}
+
+.diashowSliderContainer{
+    display: none;
+    height: 50px;
+    margin: 0;
+    border: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.diashowSlider{
+    flex-basis: 100%;
+    align-self: stretch;
 }
 
 @media (max-width: 1000px){
