@@ -37,11 +37,16 @@ function changeBackgroundFromElement(element){
 function changeBackground(name, fileformat){
     // console.log('url("' + window.location.href.slice(0, -8) + 'Wallpapers/' + name + fileformat + '")');
     var source = 'url("' + window.location.href.slice(0, -8) + 'Wallpapers/' + name + fileformat + '")';
-    document.body.children[0].style.backgroundImage = source;
+    document.getElementsByClassName("myImage")[0].style.backgroundImage = source;
+}
+
+function nextBackgroundThroughButton(count = 1){
+    document.getElementById("diashowSlider").oninput();
+    nextBackground(count);
 }
 
 function nextBackground(count = 1){
-    var oldName = document.body.children[0].style.backgroundImage;
+    var oldName = document.getElementsByClassName("myImage")[0].style.backgroundImage;
     oldName = imageNameByUrl(oldName);
     var oldImageData = imageDataByName(oldName);
     var newImageId = Number(oldImageData.id)+count;
@@ -102,10 +107,21 @@ function slideUp(){
 }
 
 function setTimerForBackground(time){
-    diashowTimer = window.setTimeout(function(){
-        nextBackground();
-        setTimerForBackground(time);
-    }, time);
+    var newSliderText = "";
+
+    if(time == 21){
+        newSliderText = "N/A";
+    }
+    else{
+        newSliderText = (time)+"s";
+
+        diashowTimer = window.setTimeout(function(){
+            nextBackground();
+            setTimerForBackground(time);
+        }, time*1000);
+    }
+
+    document.getElementsByClassName("slider-text")[0].innerHTML = newSliderText;
 }
 
 window.onload = function(){
@@ -114,9 +130,7 @@ window.onload = function(){
 
     document.getElementById("diashowSlider").oninput = function(){
         window.clearTimeout(diashowTimer);
-        if(this.value != 0){
-            console.log(600000/this.value/1000)
-            setTimerForBackground(600000/this.value);
-        }
+        setTimerForBackground(21-this.value);
+        console.log("newTimer");
     }
 }
