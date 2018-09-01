@@ -10,16 +10,11 @@ html{
 html,
 body {
     padding: 0;
-    padding-right: 13px;
     margin: 0;
     border: none;
     height: 100vh;
     width: 100vw;
     position: absolute;
-}
-
-body{
-    padding-right: 17px;
 }
 
 main{
@@ -36,15 +31,14 @@ footer{
 }
 
 h1{
-    /* position: relative; */
+    width: auto;
     font-size: 3em;
     color: orangered;
     text-align: center;
     letter-spacing: 2px;
     text-shadow: 3px 2px black;
     margin: 0;
-    padding: 15px;
-    /* z-index: 2; */
+    padding: 15px 0;
 }
 
 .flex-grid{
@@ -82,7 +76,8 @@ h1{
     background-size: cover;
 }
 
-.header{
+.header{ 
+    display: block;
     position: relative;
     z-index: 2;
 }
@@ -90,7 +85,7 @@ h1{
 .slideshow-container{
     position: absolute;
     top: 0;
-    right: 18px;
+    right: 0;
     bottom: 0;
     left: 0;
 }
@@ -119,14 +114,6 @@ h1{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.backArrow{
-    background-image: url("");
-}
-
-.forwardArrow{
-    background-image: url("");
-}
-
 .diashowSliderContainer{
     display: none;
     height: 50px;
@@ -153,5 +140,16 @@ h1{
 @media (max-width: 1000px){
     .linkText{
         font-size: 1em
+    }
+}
+
+@media (min-width:961px){
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    body{
+        padding-right: 17px;
+    }
+
+    .slideshow-container{
+        right: 17px;
     }
 }
