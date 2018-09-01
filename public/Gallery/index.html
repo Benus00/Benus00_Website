@@ -17,8 +17,8 @@
         <div class="slideshow-container">
             <div class="myImage fade">
             </div>
-            <div id="previousBackgroundArrow" class="slideshow-arrow" onclick="nextBackgroundThroughButton(-1)">&#10094</div>
-            <div id="nextBackgroundArrow" class="slideshow-arrow" onclick="nextBackgroundThroughButton(1)">&#10095</div>
+            <div id="previousBackgroundArrow" class="slideshow-arrow unselectable" onclick="nextBackgroundThroughButton(-1)">&#10094</div>
+            <div id="nextBackgroundArrow" class="slideshow-arrow unselectable" onclick="nextBackgroundThroughButton(1)">&#10095</div>
         </div>
 
         <div class="header" onmouseenter="slideDown()" onmouseleave="slideUp()">
@@ -26,11 +26,14 @@
                         <input type="range" min="0" max="20" value="0" id="diashowSlider" class="diashowSlider">
                         <div class="slider-text">N/A</div>
                 </div>
-                <h1>Gallery</h1>
+                <h1 class="unselectable">Gallery</h1>
         </div>
     </main>
     <footer>
         <section id="backgroundList" class="flex-grid"></section>
+        <div class="loadImages-Button" onclick="loadImages(backgroundListData)">
+            <p class="unselectable">load images</p>
+        </div>
     </footer>
 </body>
 

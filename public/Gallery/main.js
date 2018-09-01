@@ -16,6 +16,8 @@ function loadJSON(path, callback) {
 }
 
 function loadImages(jsonData){
+    document.getElementsByClassName("loadImages-Button")[0].style.display = "none";
+
     var templateImage = '<div id="backgroundImage#id#" class="backgroundOption" style=\'background-image: url("' + window.location.href.slice(0, -8) + 'Wallpapers/Small/#name##format#")\' onclick="changeBackgroundFromElement(this)"></div>';
     var imageList = document.getElementById('backgroundList');
 
@@ -126,7 +128,8 @@ function setTimerForBackground(time){
 
 window.onload = function(){
     // console.log(window.location.href.slice(0, -8) + 'Wallpapers/wallpapers.json');
-    loadJSON(window.location.href.slice(0, -8) + 'Wallpapers/wallpapers.json', loadImages);
+    loadJSON(window.location.href.slice(0, -8) + 'Wallpapers/wallpapers.json', function(){});
+    changeBackground("eclipse", ".jpg");
 
     document.getElementById("diashowSlider").oninput = function(){
         window.clearTimeout(diashowTimer);
