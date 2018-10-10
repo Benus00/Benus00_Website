@@ -14,8 +14,8 @@ function moveTokens(direction="right"){
     console.log("functionstart moveTokens");
     for(var x=0; x<4; x++){
         for(var y=0; y<4; y++){
-            if(field[x][y] == 0){
-                moveBlock(x, y);
+            if(field[x][y] != 0){
+                moveToken(x, y);
             }
         }
     }
@@ -26,12 +26,15 @@ function moveTokens(direction="right"){
 }
 
 function moveToken(x, y){
-    var currentElement = document.getElementById("gameboard"+x+y);
-    while(y>0){
+    var exit = false;
+    while(!exit && y>=0){
         if(field[x][parseInt(y)-1] == 0){
             field[x][parseInt(y)-1] = field[x][y];
-            currentElement.innerHTML = "";
-            moveBlock(x, y);
+            field[x][y] = 0;
+            y--;
+        }
+        else{
+            exit = true;
         }
     }
 }
@@ -42,13 +45,15 @@ function createRandomToken(){
     var random = Math.floor(Math.random()*startvalue);
     console.log(random);
     var i=0;
-    while(i<random){
-        if(field[Math.floor(i/3)][i%3] == 0){
-            i++
+    var count;
+    for(count=0; count<startvalue; count++){
+        console.log(Math.floor(count/4).toString() + count%4);
+        if(field[Math.floor(count/4)][count%4] == 0){
+            i++;
         }
     }
     i--;
-    field[Math.floor(i/3)][i%3] = 2;
+    field[Math.floor(i/4)][i%4] = 2;
     created = true;
 
     refreshUI();
