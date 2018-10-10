@@ -18,8 +18,8 @@ body {
 }
 
 #gameboardContainer{
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     margin: auto;
 }
 
@@ -31,10 +31,19 @@ body {
     justify-content: center;
 }
 
-.gamefield{
-    background-color: beige;
+.gamecell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid red;
     flex-basis: 25%;
+}
+
+.token{
+    height: 80%;
+    width: 80%;
+    background-color: lightpink;
+    font-size: 10px;
 }
 
 .button{

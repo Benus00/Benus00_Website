@@ -13,12 +13,15 @@
     <main>
         <h1>2048</h1>
         <div id="gameboardContainer">
-            <div id="gameboard" class="gameboard"></div>
+            <div id="gameboard" class="gameboard">
+                <!-- gamecells. inserted by main.js in runtime -->
+            </div>
         </div>
-        <div class="right button" onclick="moveBlocks('right')">right</div>
-        <div class="down button" onclick="moveBlocks('down')">down</div>
-        <div class="left button" onclick="moveBlocks('left')">left</div>
-        <div class="up button" onclick="moveBlocks('up')">up</div>
+        <div class="right button" onclick="moveTokens('right')">right</div>
+        <div class="down button" onclick="moveTokens('down')">down</div>
+        <div class="left button" onclick="moveTokens('left')">left</div>
+        <div class="up button" onclick="moveTokens('up')">up</div>
+        <div class="random button" onclick="createRandomToken()">randomtoken</div>
     </main>
     <!-- <footer>
         
