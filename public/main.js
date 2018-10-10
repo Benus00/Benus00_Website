@@ -36,6 +36,11 @@ function loadLinks(){
             "visibility": "visible"
         },
         {
+            "name": "2048",
+            "backgroundUrl": "",
+            "visibility": "visible"
+        },
+        {
             "name": "Leonie",
             "backgroundUrl": "",
             "visibility": "hidden"
