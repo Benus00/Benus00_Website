@@ -41,9 +41,15 @@ function loadLinks(){
             "visibility": "visible"
         },
         {
-            "name": "Leonie",
+            "name": "Love",
             "backgroundUrl": "",
-            "visibility": "hidden"
+            "visibility": "visible"
+        },
+        {
+            "name":"ImageToText",
+            "backgroundUrl": "",
+            "visibility": "visible"
+
         }
     ];
     var linkTemplate = '<a class="field" href="#name#" style="visibility: #visibility#; background-image: url(#backgroundUrl#)"><div id="#name#Gradient" class="linkGradient"><p class="linkText">#name#</p></div></a>'
