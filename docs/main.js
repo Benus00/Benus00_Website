@@ -50,6 +50,12 @@ function loadLinks(){
             "backgroundUrl": "",
             "visibility": "visible"
 
+        },
+        {
+            "name":"Japanese",
+            "backgroundUrl": "",
+            "visibility": "visible"
+
         }
     ];
     var linkTemplate = '<a class="field" href="#name#" style="visibility: #visibility#; background-image: url(#backgroundUrl#)"><div id="#name#Gradient" class="linkGradient"><p class="linkText">#name#</p></div></a>'
