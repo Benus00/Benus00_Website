@@ -14,3 +14,9 @@
     height: 50px;
     width: 50px;
 }
+
+.image{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/7.jpg");
+}
