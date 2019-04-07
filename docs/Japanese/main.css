@@ -4,13 +4,13 @@
     position: sticky;
     width: 100vw;
     height: 70px;
-    background-color: brown;
+    background-color: beige;
 }
 
 .back,.forward{
     margin: 10px;
     position: relative;
-    background-color: aqua;
+    background-color: silver;
     height: 50px;
     width: 50px;
 }
