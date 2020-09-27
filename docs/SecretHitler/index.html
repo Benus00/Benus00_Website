@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Secret Hitler</title>
+
+    <link href="main.css" rel="stylesheet"/>
+        
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+            <div>
+                <label class="lbl-number-players">
+                    <input class="input-number-players" type="number" id="quantity" name="quantity" value="5"> Players
+                </label>
+            </div>>
+            <a></a>
+            <a href="https://www.secrethitler.com/">Website</a>
+            <a href="javascript:void(0)">No Link</a>
+          </div>
+
+        <div class="gameboard liberal">
+            <img src="Images/Board_Liberal_Flipped.png" alt="Liberal board" class="board liberal">
+
+            <div class="policy-cards liberal">
+                <img src="Images/policy-cards-liberal-flipped.svg" alt="Liberal policy card 1" class="policy-card-image liberal">
+                <img src="Images/policy-cards-liberal-flipped.svg" alt="Liberal policy card 2" class="policy-card-image liberal">
+                <img src="Images/policy-cards-liberal-flipped.svg" alt="Liberal policy card 3" class="policy-card-image liberal">
+                <img src="Images/policy-cards-liberal-flipped.svg" alt="Liberal policy card 4" class="policy-card-image liberal">
+                <img src="Images/policy-cards-liberal-flipped.svg" alt="Liberal policy card 5" class="policy-card-image liberal">
+            </div>
+        </div>
+
+        <div class="gameboard fascist">
+            <img src="Images/Board_Fascist_5.png" alt="Fascist board" class="board fascist">
+
+            <div class="policy-cards fascist">
+                <img src="Images/policy-cards-fascist.svg" alt="Fascist policy card 1" class="policy-card-image fascist">
+                <img src="Images/policy-cards-fascist.svg" alt="Fascist policy card 2" class="policy-card-image fascist">
+                <img src="Images/policy-cards-fascist.svg" alt="Fascist policy card 3" class="policy-card-image fascist">
+                <img src="Images/policy-cards-fascist.svg" alt="Fascist policy card 4" class="policy-card-image fascist">
+                <img src="Images/policy-cards-fascist.svg" alt="Fascist policy card 5" class="policy-card-image fascist">
+                <img src="Images/policy-cards-fascist.svg" alt="Fascist policy card 6" class="policy-card-image fascist">
+            </div>
+        </div>
+
+        <a href="javascript:void(0)" class="sidenav-openbtn" onclick="openSideNav()">&#9776;</a>
+
+        <button class="button" onclick="draw_cards()">Draw Cards</button>
+
+
+        <div id="ctn-draw-cards">
+            <img src="Images/policy-cards-fascist.svg" alt="First card drawn" class="draw-card first" onclick="click_policy_card()">
+            <img src="Images/policy-cards-fascist.svg" alt="First card drawn" class="draw-card second" onclick="click_policy_card()">
+            <img src="Images/policy-cards-fascist.svg" alt="First card drawn" class="draw-card third" onclick="click_policy_card()">
+        </div>
+
+
+    </main>
+    <!-- <footer>
+        <p id="text">Thank you for playing with us.</p>
+    </footer> -->
+</body>
+
+</html>

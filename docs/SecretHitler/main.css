@@ -1,0 +1,201 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,body {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+main{
+    min-height: 100vh;
+    background-color: #302F2F;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    /* padding: 1em; */
+}
+
+footer{
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.gameboard{
+    display: inline-block;
+    position: relative;
+    max-height: 45vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.board{
+    max-height: 45vh;
+    max-width: 100vw;
+    border: none;
+    padding: 0;
+    font-size: 0px;
+    background-color: #302F2F;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.policy-cards{
+    display: flex;
+    position: absolute;
+
+    border: none;
+    padding: 0px;
+    font-size: 0px;
+
+    justify-content: space-around;
+    align-items: center;
+
+    /* background-color: beige; */
+}
+
+.policy-cards.liberal{
+    height: 47.9%;
+    /* height: 27.9%; */
+    width: 67.7%;
+    top: 26.5%;
+    left: 15.9%;
+
+    flex-direction: row-reverse;
+}
+
+.policy-cards.fascist{
+    height: 46.9%;
+    /* height: 28%; */
+    width: 81.6%;
+    top: 26.4%;
+    left: 9.4%;
+
+    flex-direction: row;
+}
+
+.policy-card-image{
+    height: 95%;
+    width: auto;
+    /* position:absolute; */
+    visibility: hidden;
+}
+
+
+.button{
+    display: block;
+    width: 100px;
+    height: 20px;
+
+    margin: auto;
+}
+
+#ctn-draw-cards{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.draw-card{
+    height: auto;
+    width: 15vw;
+}
+
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+  
+/* The navigation menu links */
+.sidenav a,label {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+  
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top left corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+/* Position and style the open button (top right corner) */
+.sidenav-openbtn {
+    display: block;
+    position: absolute;
+    min-height: 20px;
+    min-width: 20px;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    text-decoration: none;
+    color: grey;
+    transition: 0.3s;
+}
+/* When you mouse over the open button, change its color */
+.sidenav-openbtn:hover {
+    color: #f1f1f1;
+}
+
+/* Hide Arrows From Input Number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input-number-players{
+    font-size: 25px;
+    max-width: 35px;
+    border-radius: 10px;
+    background-color: #302F2F;
+    border: none;
+
+    text-align: center;
+    color: #818181;
+}
