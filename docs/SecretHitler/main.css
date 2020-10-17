@@ -14,7 +14,7 @@ html,body {
 
 main{
     min-height: 100vh;
-    background-color: #302F2F;
+    background-color: #363835;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -34,6 +34,7 @@ footer{
     display: inline-block;
     position: relative;
     max-height: 45vh;
+    /* padding: 3vh 3vh; */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -44,7 +45,7 @@ footer{
     border: none;
     padding: 0;
     font-size: 0px;
-    background-color: #302F2F;
+    background-color: #363835;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -65,36 +66,40 @@ footer{
 }
 
 .policy-cards.liberal{
-    height: 47.9%;
-    /* height: 27.9%; */
-    width: 67.7%;
-    top: 26.5%;
-    left: 15.9%;
+    /* height: calc((100% - 6vh)*(64.198/122.397));
+    width: calc((100% - 6vh)*(270.769/374.577));
+    top: calc((100% - 6vh)*(29.232/122.397) + 3vh);
+    left: calc((100% - 6vh)*(51.685/374.577) + 3vh); */
+    height: calc(100%*(64.198/122.397));
+    width: calc(100%*(270.769/374.577));
+    top: calc(100%*(29.232/122.397));
+    left: calc(100%*(51.685/374.577));
 
     flex-direction: row-reverse;
 }
 
 .policy-cards.fascist{
-    height: 46.9%;
+    height: 51.5%;
     /* height: 28%; */
-    width: 81.6%;
-    top: 26.4%;
-    left: 9.4%;
+    width: 86%;
+    top: 25%;
+    left: 7.3%;
 
     flex-direction: row;
+
+    /* background-color: aliceblue; */
 }
 
 .policy-card-image{
-    height: 95%;
-    width: auto;
-    /* position:absolute; */
     visibility: hidden;
+    height: 105%;
+    width: auto;
 }
 
 
 .button{
     display: block;
-    width: 100px;
+    width: 120px;
     height: 20px;
 
     margin: auto;
@@ -113,9 +118,31 @@ footer{
 }
 
 .draw-card{
+    display: none;
+    visibility: hidden;
     height: auto;
     width: 15vw;
 }
+
+
+.election-tracker-container{
+    display: flex;
+    position: absolute;
+    top: 6%;
+    left: 34.4%;
+    height: 9.9%;
+    width: 32.65%;
+
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.election-tracker{
+    visibility: hidden;
+    height: 100%;
+}
+
+
 
 
 
@@ -193,7 +220,7 @@ input[type=number] {
     font-size: 25px;
     max-width: 35px;
     border-radius: 10px;
-    background-color: #302F2F;
+    background-color: #363835;
     border: none;
 
     text-align: center;
