@@ -63,9 +63,9 @@ function loadLinks(){
 
         }
     ];
-    var linkTemplate = '<a class="field" href="#name#" style="visibility: #visibility#; background-image: url(#backgroundUrl#)"><div id="#name#Gradient" class="linkGradient"><p class="linkText">#name#</p></div></a>'
+    var linkTemplate = '<a class="field" href="#link#" style="visibility: #visibility#; background-image: url(#backgroundUrl#)"><div id="#name#Gradient" class="linkGradient"><p class="linkText">#name#</p></div></a>'
     for(var i=0; i<linkInfoList.length; i++){
-        list.innerHTML += linkTemplate.replace(/#name#/g, linkInfoList[i].name.replace(/_/g, " ")).replace(/#visibility#/g, linkInfoList[i].visibility).replace(/#backgroundUrl#/g, linkInfoList[i].backgroundUrl);
+        list.innerHTML += linkTemplate.replace(/#link#/g, linkInfoList[i].name).replace(/#visibility#/g, linkInfoList[i].visibility).replace(/#backgroundUrl#/g, linkInfoList[i].backgroundUrl).replace(/#name#/g, linkInfoList[i].name.replace(/_/g, " "));
         // list.children[i].style.backgroundImage = 'url("' + linkInfoList[i].backgroundUrl + '")';
     }
     // list.innerHTML += '<a class="field" href="HappyBirthday"> <p class="linkText">Happy Birthday</p> </a>';
