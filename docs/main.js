@@ -21,6 +21,11 @@ function loadLinks(){
             "visibility": "visible"
         },
         {
+            "name": "Secret Hitler",
+            "backgroundUrl": "",
+            "visibility": "visible"
+        },
+        {
             "name": "HappyBirthday",
             "backgroundUrl": "",
             "visibility": "visible"
